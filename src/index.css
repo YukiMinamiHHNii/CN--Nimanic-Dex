@@ -1,9 +1,9 @@
 :root {
 	--bg-color: #313131;
-	--text-color: #FFF;
+	--text-color: #fff;
 }
 
-html{
+html {
 	background-color: var(--bg-color);
 }
 
@@ -19,12 +19,13 @@ main,
 	min-height: 100vh;
 }
 
-#side-menu a{
+#side-menu a {
 	color: var(--text-color);
 }
 
 #contents {
 	flex-grow: 1;
+	color: var(--text-color);
 }
 
 main > .row {
@@ -70,15 +71,4 @@ p {
 input[type="submit"],
 .btn input[type="reset"] {
 	color: #fafafa;
-}
-
-.card .collection,
-.card-action {
-	font-size: 1rem;
-	font-weight: 600;
-	text-align: center;
-}
-
-.comment-result {
-	text-align: center;
 }
