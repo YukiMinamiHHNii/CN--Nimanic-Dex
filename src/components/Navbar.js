@@ -9,12 +9,12 @@ export class Navbar extends React.Component {
 		return (
 			<header className="navbar">
 				<nav className="red darken-2">
-					<div class="nav-wrapper container">
-						<span class="brand-logo">NimanicDex</span>
-						<a href="#!" data-target="side-menu" class="sidenav-trigger right">
-							<i class="material-icons">menu</i>
+					<div className="nav-wrapper container">
+						<span className="brand-logo">NimanicDex</span>
+						<a href="#!" data-target="side-menu" className="sidenav-trigger right">
+							<i className="material-icons">menu</i>
 						</a>
-						<ul class="right hide-on-med-and-down">
+						<ul className="right hide-on-med-and-down">
 							<li>
 								<a href="https://github.com/YukiMinamiHHNii/CN--Nimanic-Dex">
 									Github
@@ -23,7 +23,7 @@ export class Navbar extends React.Component {
 						</ul>
 					</div>
 				</nav>
-				<ul class="sidenav red darken-2" id="side-menu">
+				<ul className="sidenav red darken-2" id="side-menu">
 					<li>
 						<a href="https://github.com/YukiMinamiHHNii/CN--Nimanic-Dex">
 							Github

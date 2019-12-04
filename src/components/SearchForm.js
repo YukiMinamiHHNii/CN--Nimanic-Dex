@@ -4,13 +4,13 @@ export class SearchForm extends React.Component {
 	render() {
 		return (
 			<form className="row">
-				<div class="input-field  col s12 m12 l4">
-					<label for="pokemon">Search a Pokémon:</label>
-					<input name="pokemon" type="text" class="validate" />
+				<div className="input-field  col s12 m12 l4">
+					<label htmlFor="pokemon">Search a Pokémon:</label>
+					<input name="pokemon" type="text" className="validate" />
 				</div>
-				<div class="input-field  col s12 m12 l4">
+				<div className="input-field  col s12 m12 l4">
 					<select id="pokedex-filterType" name="filterType">
-						<option value="" disabled selected>
+						<option defaultValue="" disabled >
 							Choose your option
 						</option>
 						<option value="typing">Typing</option>
@@ -18,9 +18,9 @@ export class SearchForm extends React.Component {
 					</select>
 					<label>Filter by:</label>
 				</div>
-				<div class="input-field  col s12 m12 l4">
+				<div className="input-field  col s12 m12 l4">
 					<select id="pokedex-filterValue">
-						<option value="" disabled selected>
+						<option defaultValue="" disabled >
 							Choose your option
 						</option>
 					</select>

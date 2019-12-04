@@ -1,5 +1,6 @@
 :root {
 	--bg-color: #313131;
+	--bg-color-sec: #181915;
 	--text-color: #fff;
 }
 
@@ -71,4 +72,18 @@ p {
 input[type="submit"],
 .btn input[type="reset"] {
 	color: #fafafa;
+}
+
+.card-img{
+	padding-top: 1rem; 
+}
+
+.card-name {
+	margin: 0;
+	padding: 1rem 0;
+}
+
+.card{
+	background-color: var(--bg-color-sec);
+	border-radius: 2%;
 }
