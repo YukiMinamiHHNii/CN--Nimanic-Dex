@@ -1,15 +1,27 @@
 import React from "react";
+import { Loader } from "./Loader";
 import { SearchForm } from "./SearchForm";
 import { CardResult } from "./CardResult";
 import { getPokemonList } from "../utils/api";
+import { getPokemonListByName } from "../utils/api";
 
-export class Pokedex extends React.Component {
-	state = {
+const SEARCH_NG = {
 		next: null,
 		previous: null,
 		results: null,
-		error: false
+		error: true,
+		isLoading: false
+	},
+	SEARCH_INIT = {
+		next: null,
+		previous: null,
+		results: null,
+		error: false,
+		isLoading: true
 	};
+
+export class Pokedex extends React.Component {
+	state = SEARCH_INIT;
 	componentDidMount() {
 		return getPokemonList()
 			.then(data => {
@@ -17,18 +29,30 @@ export class Pokedex extends React.Component {
 					next: data.next,
 					previous: data.previous,
 					results: data.results,
-					error: false
+					error: false,
+					isLoading: false
 				});
 			})
 			.catch(error => {
-				this.setState({
-					next: null,
-					previous: null,
-					results: null,
-					error: true
-				});
+				this.setState(SEARCH_NG);
 			});
 	}
+	onSearch = name => {
+		this.setState({ isLoading: true });
+		return getPokemonListByName(name)
+			.then(data => {
+				this.setState({
+					next: data.next,
+					previous: data.previous,
+					results: data.results,
+					error: false,
+					isLoading: false
+				});
+			})
+			.catch(error => {
+				this.setState(SEARCH_NG);
+			});
+	};
 	render() {
 		return (
 			<div>
@@ -40,9 +64,13 @@ export class Pokedex extends React.Component {
 						page with species typing, moves, stats and more.
 					</p>
 				</div>
-				<SearchForm />
-				{this.state.results !== null && (
+				<SearchForm onSearch={this.onSearch} />
+				{this.state.isLoading && <Loader />}
+				{!this.state.isLoading && !this.state.error && (
 					<CardResult data={this.state.results} />
+				)}
+				{!this.state.isLoading && this.state.error && (
+					<h3 className="center">Error while communicating with API!</h3>
 				)}
 			</div>
 		);

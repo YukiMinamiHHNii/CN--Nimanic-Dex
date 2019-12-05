@@ -74,8 +74,8 @@ input[type="submit"],
 	color: #fafafa;
 }
 
-.card-img{
-	padding-top: 1rem; 
+.card-img {
+	padding-top: 1rem;
 }
 
 .card-name {
@@ -83,7 +83,16 @@ input[type="submit"],
 	padding: 1rem 0;
 }
 
-.card{
+.card {
 	background-color: var(--bg-color-sec);
 	border-radius: 2%;
+}
+
+input[type="text"] {
+	color: var(--text-color);
+}
+
+input[type="text"]:not(.browser-default):focus:not([readonly]) {
+	border-bottom: 1px solid #9e9e9e;
+	box-shadow: none;
 }
