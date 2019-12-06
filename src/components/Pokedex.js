@@ -2,6 +2,7 @@ import React from "react";
 import { Loader } from "./Loader";
 import { SearchForm } from "./SearchForm";
 import { CardResult } from "./CardResult";
+import { Modal } from "./Modal";
 import { getPokemonList } from "../utils/api";
 import { getPokemonListByName } from "../utils/api";
 
@@ -10,14 +11,16 @@ const SEARCH_NG = {
 		previous: null,
 		results: null,
 		error: true,
-		isLoading: false
+		isLoading: false,
+		selectedPoke: null
 	},
 	SEARCH_INIT = {
 		next: null,
 		previous: null,
 		results: null,
 		error: false,
-		isLoading: true
+		isLoading: true,
+		selectedPoke: null
 	};
 
 export class Pokedex extends React.Component {
@@ -53,6 +56,9 @@ export class Pokedex extends React.Component {
 				this.setState(SEARCH_NG);
 			});
 	};
+	onSelect = selectedPoke => {
+		this.setState({ selectedPoke });
+	};
 	render() {
 		return (
 			<div>
@@ -67,11 +73,12 @@ export class Pokedex extends React.Component {
 				<SearchForm onSearch={this.onSearch} />
 				{this.state.isLoading && <Loader />}
 				{!this.state.isLoading && !this.state.error && (
-					<CardResult data={this.state.results} />
+					<CardResult data={this.state.results} onSelect={this.onSelect} />
 				)}
 				{!this.state.isLoading && this.state.error && (
 					<h3 className="center">Error while communicating with API!</h3>
 				)}
+				<Modal name="pokeData" pokemon={this.state.selectedPoke} />
 			</div>
 		);
 	}

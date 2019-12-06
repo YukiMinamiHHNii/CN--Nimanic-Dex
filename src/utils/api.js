@@ -40,3 +40,23 @@ export const getPokemonListByName = name => {
 				: Promise.reject({ error: error });
 		});
 };
+
+export const getPokemonDataByName = name => {
+	return axios
+		.get(`${process.env.REACT_APP_API_ENDPOINT}/pokemon/${name.toLowerCase()}`)
+		.then(result => {
+			return {
+				photo: result.data.sprites.front_default,
+				dex_number: result.data.id,
+				height: result.data.height,
+				weight: result.data.weight,
+				species: result.data.name,
+				abilities: result.data.abilities,
+				moves: result.data.moves.splice(0, 4),
+				stats: result.data.stats
+			};
+		})
+		.catch(error => {
+			return Promise.reject({ error: error });
+		});
+};
