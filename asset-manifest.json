@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/CN--Nimanic-Dex/static/css/main.c79c666c.chunk.css",
-    "main.js": "/CN--Nimanic-Dex/static/js/main.c579864d.chunk.js",
-    "main.js.map": "/CN--Nimanic-Dex/static/js/main.c579864d.chunk.js.map",
+    "main.js": "/CN--Nimanic-Dex/static/js/main.f1c036dc.chunk.js",
+    "main.js.map": "/CN--Nimanic-Dex/static/js/main.f1c036dc.chunk.js.map",
     "runtime-main.js": "/CN--Nimanic-Dex/static/js/runtime-main.6aaf7612.js",
     "runtime-main.js.map": "/CN--Nimanic-Dex/static/js/runtime-main.6aaf7612.js.map",
     "static/css/2.6a906a3b.chunk.css": "/CN--Nimanic-Dex/static/css/2.6a906a3b.chunk.css",
     "static/js/2.b3bc5e4d.chunk.js": "/CN--Nimanic-Dex/static/js/2.b3bc5e4d.chunk.js",
     "static/js/2.b3bc5e4d.chunk.js.map": "/CN--Nimanic-Dex/static/js/2.b3bc5e4d.chunk.js.map",
     "index.html": "/CN--Nimanic-Dex/index.html",
-    "precache-manifest.3520c9ec314f45e517741a07ca1391e5.js": "/CN--Nimanic-Dex/precache-manifest.3520c9ec314f45e517741a07ca1391e5.js",
+    "precache-manifest.a58117798962cf09a7c1f0f2ec376faa.js": "/CN--Nimanic-Dex/precache-manifest.a58117798962cf09a7c1f0f2ec376faa.js",
     "service-worker.js": "/CN--Nimanic-Dex/service-worker.js",
     "static/css/2.6a906a3b.chunk.css.map": "/CN--Nimanic-Dex/static/css/2.6a906a3b.chunk.css.map",
     "static/css/main.c79c666c.chunk.css.map": "/CN--Nimanic-Dex/static/css/main.c79c666c.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.6a906a3b.chunk.css",
     "static/js/2.b3bc5e4d.chunk.js",
     "static/css/main.c79c666c.chunk.css",
-    "static/js/main.c579864d.chunk.js"
+    "static/js/main.f1c036dc.chunk.js"
   ]
 }
