@@ -42,7 +42,28 @@ export class Pokedex extends React.Component {
 	}
 	onSearch = name => {
 		this.setState({ isLoading: true });
-		return getPokemonListByName(name)
+		return getPokemonListByName(name!==""?name:"pikachu")
+			.then(data => {
+				this.setState({
+					next: null,
+					previous: null,
+					results: data.results,
+					error: false,
+					isLoading: false
+				});
+			})
+			.catch(error => {
+				this.setState(SEARCH_NG);
+			});
+	};
+	onSelect = selectedPoke => {
+		this.setState({ selectedPoke });
+	};
+	search = direction => {
+		this.setState({ isLoading: true });
+		return getPokemonList(
+			direction === "next" ? this.state.next : this.state.previous
+		)
 			.then(data => {
 				this.setState({
 					next: data.next,
@@ -55,9 +76,6 @@ export class Pokedex extends React.Component {
 			.catch(error => {
 				this.setState(SEARCH_NG);
 			});
-	};
-	onSelect = selectedPoke => {
-		this.setState({ selectedPoke });
 	};
 	render() {
 		return (
@@ -78,6 +96,26 @@ export class Pokedex extends React.Component {
 				{!this.state.isLoading && this.state.error && (
 					<h3 className="center">Error while communicating with API!</h3>
 				)}
+				<div className="row center">
+					{this.state.previous !== null && (
+						<a
+							href="!#"
+							className="waves-effect waves-light btn pagination red darken-2"
+							onClick={() => this.search("prev")}
+						>
+							Prev
+						</a>
+					)}
+					{this.state.next !== null && (
+						<a
+							href="!#"
+							className="btn pagination red darken-2"
+							onClick={() => this.search("next")}
+						>
+							Next
+						</a>
+					)}
+				</div>
 				<Modal name="pokeData" pokemon={this.state.selectedPoke} />
 			</div>
 		);
