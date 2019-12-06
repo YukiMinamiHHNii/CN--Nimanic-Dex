@@ -17,7 +17,7 @@ const notFound = () => {
 const resultList = (data, onSelect) => {
 	return data.map(item => {
 		return (
-			<article className="col s4 m3" key={item.name}>
+			<article className="col s12 m4 l3" key={item.name}>
 				<div
 					className="center card modal-trigger"
 					data-target="pokeData"
