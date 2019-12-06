@@ -85,4 +85,3 @@ export class Modal extends React.Component {
 		);
 	}
 }
-//foto, número en la pokédex, altura, peso, especie, habilidad, primeros 4 movimientos y  los puntos base de sus estadísticas (PS, ataque, defensa, ataque especial, defensa especial y velocidad).
