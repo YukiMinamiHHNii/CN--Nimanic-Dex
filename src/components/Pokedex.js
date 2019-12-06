@@ -98,22 +98,20 @@ export class Pokedex extends React.Component {
 				)}
 				<div className="row center">
 					{this.state.previous !== null && (
-						<a
-							href="!#"
+						<button							
 							className="waves-effect waves-light btn pagination red darken-2"
 							onClick={() => this.search("prev")}
 						>
 							Prev
-						</a>
+						</button>
 					)}
 					{this.state.next !== null && (
-						<a
-							href="!#"
+						<button
 							className="btn pagination red darken-2"
 							onClick={() => this.search("next")}
 						>
 							Next
-						</a>
+						</button>
 					)}
 				</div>
 				<Modal name="pokeData" pokemon={this.state.selectedPoke} />
