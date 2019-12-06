@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cbb55d0fd8a6b3eda603cfff4adfe256",
+    "revision": "68d2ef7a829e0f5b60bf343a928284ec",
     "url": "/CN--Nimanic-Dex/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CN--Nimanic-Dex/static/css/2.6a906a3b.chunk.css"
   },
   {
-    "revision": "434a8c959f1f0d3372e2",
+    "revision": "20d4ebee2c144cee6f50",
     "url": "/CN--Nimanic-Dex/static/css/main.c79c666c.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CN--Nimanic-Dex/static/js/2.b3bc5e4d.chunk.js"
   },
   {
-    "revision": "434a8c959f1f0d3372e2",
-    "url": "/CN--Nimanic-Dex/static/js/main.a69b5ff3.chunk.js"
+    "revision": "20d4ebee2c144cee6f50",
+    "url": "/CN--Nimanic-Dex/static/js/main.c579864d.chunk.js"
   },
   {
     "revision": "08734176334d012532c1",
